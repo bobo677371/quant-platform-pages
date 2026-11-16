@@ -1,0 +1,28 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at_sh": "2026-11-16T17:12:05+08:00",
+  "quality_tier": "APPROX_HISTORY",
+  "status": "unavailable",
+  "model_version": "sector_heat_v0.1.0",
+  "sources": [
+   "sina:stock_sector_spot 行业清单",
+   "sina:stock_sector_detail 成分（当前快照）",
+   "tencent:fqkline 历史日线"
+  ],
+  "warnings": [
+   "行业口径为新浪 49 行业（非申万）；成分是当前快照，历史不可回溯",
+   "概念板块默认未抓取（免费源不稳定）"
+  ],
+  "confidence": null,
+  "stale": false,
+  "missing_indicators": []
+ },
+ "data": {
+  "taxonomy": "unknown_concept",
+  "taxonomy_note": "未知来源口径 / 当前成员快照（非申万；历史成分不可回溯）",
+  "sectors": [],
+  "status": "ok",
+  "model_version": "sector_heat_v0.1.0"
+ }
+}

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>量化研究终端 · 市场状态</title>
+<meta name="description" content="本地运行的 A 股量化研究终端：市场情绪、板块热度、低位候选、涨停生态、研究状态与系统状态。只描述当前状态，不预测涨跌。">
+<meta name="color-scheme" content="light dark">
+
+<!-- 深浅两套 theme-color（全部本地资源，无外链字体/图标） -->
+<meta name="theme-color" content="#f4f6f9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e1116" media="(prefers-color-scheme: dark)">
+
+<!-- iOS 全屏 / 桌面安装 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="量化终端">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到主内容</a>
+
+<!-- ===================== 顶部固定条 ===================== -->
+<div class="topwrap" id="topwrap">
+  <header class="topbar" id="topbar">
+    <div class="tb-r1">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18V9M8 18V5M13 18v-6M18 18v-9"/>
+          </svg>
+        </span>
+        <span class="brand-name">量化研究终端</span>
+        <span class="brand-tag">本地 · 只读</span>
+      </div>
+      <div class="tb-actions">
+        <button class="icon-btn" id="refreshBtn" type="button" title="重新读取本地数据" aria-label="重新读取本地数据">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12a7 7 0 1 1-2.1-5"/><path d="M19 4v5h-5"/>
+          </svg>
+        </button>
+        <button class="icon-btn" id="themeBtn" type="button" title="切换深浅色" aria-label="切换深浅色">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="8"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor" stroke="none"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="tb-r2">
+      <span class="tb-item"><span class="tb-k">时点</span><b class="tb-v" id="tbAsOf">—</b></span>
+      <span class="tb-item"><span class="tb-k">模式</span><b class="tb-v" id="tbMode">—</b></span>
+      <span class="tb-item" title="数据健康灯"><span class="light" id="tbLight" data-status="unknown" aria-hidden="true"></span><b class="tb-v" id="tbLightText">—</b><span class="sr-only">数据健康状态</span></span>
+      <span class="tb-item"><span class="tb-k">模型</span><b class="tb-v" id="tbModel">—</b></span>
+    </div>
+  </header>
+
+  <!-- stale 黄色横幅：meta.stale===true 或 status==='stale' 或读的是缓存快照 -->
+  <div class="stale-banner" id="staleBanner" role="alert" hidden>
+    <span class="stale-icon" aria-hidden="true">!</span>
+    <span class="stale-text"><b>数据为上次成功快照</b><span id="staleDetail"></span></span>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ===================== 1. 市场总览 ===================== -->
+  <section class="page" id="page-overview" data-page="overview" role="tabpanel" aria-labelledby="tab-overview">
+    <div class="page-head">
+      <h1>市场总览</h1>
+      <p class="page-sub">情绪总分 → 五分项 → 底层指标，逐层可展开；只描述当前状态，不预测涨跌。</p>
+    </div>
+
+    <div id="ovScore">
+      <div class="card loading">正在读取 data/market_overview.json …</div>
+    </div>
+
+    <div class="card" id="chartCard">
+      <div class="card-head">
+        <h2 class="card-title">三联图 · 指数日K / 成交额 / 净上涨家数</h2>
+        <p class="card-sub" id="triSub">三面板共享日期轴、轴指示器与缩放；某日缺数据时保留空位，不删日期、不用 0 填充。</p>
+      </div>
+      <div class="chip-row" id="idxChips" role="group" aria-label="切换指数"></div>
+      <div class="chip-row" id="rangeChips" role="group" aria-label="切换显示区间"></div>
+      <div class="chart" id="triChart" role="img" aria-label="指数日K线、成交额柱状图与净上涨家数折线三联图"></div>
+      <ul class="legend-list">
+        <li><span class="dot up" aria-hidden="true"></span>红 = 上涨 / 净上涨为正，数值标 <code>+</code></li>
+        <li><span class="dot down" aria-hidden="true"></span>绿 = 下跌 / 净上涨为负，数值标 <code>−</code></li>
+        <li><span class="dot zero" aria-hidden="true"></span>下方虚线为 0 轴（净上涨 0 家）</li>
+        <li>成交额单位：亿元；空白 = 该交易日无数据</li>
+      </ul>
+      <p class="note" id="triNote"></p>
+    </div>
+
+    <div id="ovBreadth"></div>
+    <div id="ovMetrics"></div>
+    <div id="ovContrib"></div>
+  </section>
+
+  <!-- ===================== 2. 板块雷达 ===================== -->
+  <section class="page" id="page-sectors" data-page="sectors" role="tabpanel" aria-labelledby="tab-sectors" hidden>
+    <div class="page-head">
+      <h1>板块雷达</h1>
+      <p class="page-sub">热度描述“正在发生什么”，拥挤度是独立风险分：热度高不等于拥挤高，两者分开看。</p>
+    </div>
+
+    <div class="chip-row" id="sectorTabs" role="tablist" aria-label="板块口径"></div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2 class="card-title">口径</h2>
+        <p class="card-sub">成分是<b>当前快照</b>，不含历史生效日期，因此不做历史轮动回测。</p>
+      </div>
+      <p class="tax-line"><span id="secTaxonomy">—</span> <code class="code-chip" id="secTaxonomyRaw"></code></p>
+      <ul class="plain-list compact">
+        <li>持续性需要历史积累；历史不足时显示「—（历史不足）」，不以 0 代替。</li>
+        <li>列头「热度 / 拥挤度」为两个独立字段，同屏展示。</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="sec-head" aria-hidden="true"><span>板块</span><span>热度</span><span>拥挤度</span></div>
+      <div id="sectorBody">
+        <div class="loading">正在读取板块数据 …</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. 低位候选 ===================== -->
+  <section class="page" id="page-candidates" data-page="candidates" role="tabpanel" aria-labelledby="tab-candidates" hidden>
+    <div class="page-head">
+      <h1 id="candTitle">低位候选</h1>
+      <p class="page-sub" id="candSub">低位与优质分开计算：某个维度缺失时显示「—」，既不当作 0 分，也不用价格分替代质量分。</p>
+    </div>
+
+    <div class="chip-row" id="candHorizon" role="tablist" aria-label="研究周期"></div>
+    <div id="candDegrade"></div>
+    <div id="candList">
+      <div class="card loading">正在读取候选数据 …</div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. 涨停生态 ===================== -->
+  <section class="page" id="page-limit" data-page="limit" role="tabpanel" aria-labelledby="tab-limit" hidden>
+    <div class="page-head">
+      <h1>涨停生态</h1>
+      <p class="page-sub">触板 / 封板 / 炸板 / 连板梯队 / 封单 / 可成交性。缺口一律显示「—」。</p>
+    </div>
+
+    <div id="limCounts">
+      <div class="card loading">正在读取 data/limit_ecology.json …</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2 class="card-title">连板梯队</h2></div>
+      <div id="limLadder"><p class="empty-line">—</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2 class="card-title">涨停明细</h2>
+        <p class="card-sub">封单额缺失显示「—」；表格可左右滑动，页面本身不横向滚动。</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="limTable">
+          <thead>
+            <tr>
+              <th scope="col">名称</th>
+              <th scope="col">行业</th>
+              <th scope="col">首封</th>
+              <th scope="col">开板</th>
+              <th scope="col">封单额</th>
+              <th scope="col">可成交性</th>
+            </tr>
+          </thead>
+          <tbody id="limRows">
+            <tr><td colspan="6" class="empty-cell">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2 class="card-title">次日溢价（样本口径）</h2></div>
+      <div id="limPremium"><p class="empty-line">—</p></div>
+    </div>
+
+    <p class="note">AKShare 涨停池仅近期，历史自上线日起沉淀。</p>
+    <p class="note" id="limNote"></p>
+  </section>
+
+  <!-- ===================== 5. 研究状态 ===================== -->
+  <section class="page" id="page-research" data-page="research" role="tabpanel" aria-labelledby="tab-research" hidden>
+    <div class="page-head">
+      <h1>研究状态</h1>
+      <p class="page-sub">策略版本、走查结果、影子账本与因子定义。数据由后端导出，前端只展示不推断。</p>
+    </div>
+    <div id="researchBody">
+      <div class="card loading">正在读取 data/research_status.json …</div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. 系统状态 ===================== -->
+  <section class="page" id="page-system" data-page="system" role="tabpanel" aria-labelledby="tab-system" hidden>
+    <div class="page-head">
+      <h1>系统状态</h1>
+      <p class="page-sub">数据新鲜度、任务运行记录、模型版本与存储占用。</p>
+    </div>
+
+    <div id="sysOverall">
+      <div class="card loading">正在读取 data/system_health.json …</div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <h2 class="card-title">数据集</h2>
+        <p class="card-sub">状态 / 行数 / 时点 / 质量等级 / 警告；表格可左右滑动。</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="sysDatasetTable">
+          <thead>
+            <tr>
+              <th scope="col">数据集</th>
+              <th scope="col">状态</th>
+              <th scope="col">行数</th>
+              <th scope="col">时点</th>
+              <th scope="col">质量等级</th>
+              <th scope="col">警告</th>
+            </tr>
+          </thead>
+          <tbody id="sysDatasets">
+            <tr><td colspan="6" class="empty-cell">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2 class="card-title">运行记录</h2></div>
+      <div id="sysRuns"><p class="empty-line">—</p></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head"><h2 class="card-title">模型版本与存储</h2></div>
+      <div id="sysMeta"><p class="empty-line">—</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== 底部 Tab（每个触控目标 ≥44px） ===================== -->
+<nav class="tabbar" id="tabbar" aria-label="一级页面">
+  <button class="tab" id="tab-overview" type="button" data-target="overview" role="tab" aria-selected="true" aria-controls="page-overview">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l5-6 4 3 6-8"/><path d="M3 21h18"/></svg>
+    <span>市场总览</span>
+  </button>
+  <button class="tab" id="tab-sectors" type="button" data-target="sectors" role="tab" aria-selected="false" aria-controls="page-sectors">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7.2"/><path d="M12 4.8V12l5 3.4"/></svg>
+    <span>板块雷达</span>
+  </button>
+  <button class="tab" id="tab-candidates" type="button" data-target="candidates" role="tab" aria-selected="false" aria-controls="page-candidates">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"/><path d="M4 12h10"/><path d="M4 18h6"/><path d="M16 15l3 3 3-4"/></svg>
+    <span>低位候选</span>
+  </button>
+  <button class="tab" id="tab-limit" type="button" data-target="limit" role="tab" aria-selected="false" aria-controls="page-limit">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V11"/><path d="M12 20V4"/><path d="M19 20v-7"/><path d="M3 20h18"/></svg>
+    <span>涨停生态</span>
+  </button>
+  <button class="tab" id="tab-research" type="button" data-target="research" role="tab" aria-selected="false" aria-controls="page-research">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h9l5 5v11H5z"/><path d="M14 4v5h5"/><path d="M8.5 13h7"/><path d="M8.5 16.5h4.5"/></svg>
+    <span>研究状态</span>
+  </button>
+  <button class="tab" id="tab-system" type="button" data-target="system" role="tab" aria-selected="false" aria-controls="page-system">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+    <span>系统状态</span>
+  </button>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<noscript><p class="noscript">需要启用 JavaScript 才能显示数据。</p></noscript>
+
+<script src="vendor/echarts.min.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

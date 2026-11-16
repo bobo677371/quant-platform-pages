@@ -1,0 +1,679 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at_sh": "2026-11-16T17:14:17+08:00",
+  "quality_tier": "LIVE_CURRENT",
+  "status": "ok",
+  "model_version": "limit_ecology_v0.1.0",
+  "sources": [
+   "eastmoney:stock_zt_pool_em 涨停池",
+   "eastmoney:stock_zt_pool_zbgc_em 炸板池",
+   "eastmoney:stock_zt_pool_dtgc_em 跌停池",
+   "eastmoney:stock_zt_pool_previous_em 昨日涨停"
+  ],
+  "warnings": [
+   "涨停池仅近期数据，历史自上线日起沉淀"
+  ],
+  "confidence": null,
+  "stale": false,
+  "missing_indicators": []
+ },
+ "data": {
+  "counts": {
+   "limit_up": 32,
+   "broken": 16,
+   "touched": 48,
+   "limit_down": 60,
+   "seal_rate": 0.6666666666666666,
+   "ladder_max": 4
+  },
+  "ladder": [
+   {
+    "height": 4,
+    "items": [
+     {
+      "ts_code": "002148.SZ",
+      "name": "北纬科技",
+      "first_seal_time": "092500",
+      "order_amount": 26496557.0
+     }
+    ]
+   },
+   {
+    "height": 3,
+    "items": [
+     {
+      "ts_code": "002187.SZ",
+      "name": "广百股份",
+      "first_seal_time": "093003",
+      "order_amount": 199469394.0
+     },
+     {
+      "ts_code": "002205.SZ",
+      "name": "国统股份",
+      "first_seal_time": "093445",
+      "order_amount": 12299162.0
+     }
+    ]
+   },
+   {
+    "height": 2,
+    "items": [
+     {
+      "ts_code": "000819.SZ",
+      "name": "岳阳兴长",
+      "first_seal_time": "092500",
+      "order_amount": 20212660.0
+     },
+     {
+      "ts_code": "002905.SZ",
+      "name": "金逸影视",
+      "first_seal_time": "092500",
+      "order_amount": 115834447.0
+     },
+     {
+      "ts_code": "002425.SZ",
+      "name": "凯撒文化",
+      "first_seal_time": "093000",
+      "order_amount": 108632975.0
+     },
+     {
+      "ts_code": "002548.SZ",
+      "name": "金新农",
+      "first_seal_time": "093000",
+      "order_amount": 27617170.0
+     },
+     {
+      "ts_code": "600715.SH",
+      "name": "文投控股",
+      "first_seal_time": "093024",
+      "order_amount": 28809968.0
+     },
+     {
+      "ts_code": "002685.SZ",
+      "name": "华东重机",
+      "first_seal_time": "093309",
+      "order_amount": 163517998.0
+     },
+     {
+      "ts_code": "002748.SZ",
+      "name": "世龙实业",
+      "first_seal_time": "102339",
+      "order_amount": 38502092.0
+     },
+     {
+      "ts_code": "000595.SZ",
+      "name": "新能股份",
+      "first_seal_time": "111451",
+      "order_amount": 18319648.0
+     }
+    ]
+   },
+   {
+    "height": 1,
+    "items": [
+     {
+      "ts_code": "002419.SZ",
+      "name": "天虹股份",
+      "first_seal_time": "093233",
+      "order_amount": 57362499.0
+     },
+     {
+      "ts_code": "002356.SZ",
+      "name": "鹏飞绿能",
+      "first_seal_time": "093600",
+      "order_amount": 19039431.0
+     },
+     {
+      "ts_code": "605378.SH",
+      "name": "野马电池",
+      "first_seal_time": "093649",
+      "order_amount": 41228880.0
+     },
+     {
+      "ts_code": "601188.SH",
+      "name": "龙江交通",
+      "first_seal_time": "093828",
+      "order_amount": 82480708.0
+     },
+     {
+      "ts_code": "600822.SH",
+      "name": "上海物贸",
+      "first_seal_time": "094634",
+      "order_amount": 41098976.0
+     },
+     {
+      "ts_code": "600936.SH",
+      "name": "北投科技",
+      "first_seal_time": "094741",
+      "order_amount": 64438260.0
+     },
+     {
+      "ts_code": "000521.SZ",
+      "name": "长虹美菱",
+      "first_seal_time": "094745",
+      "order_amount": 13219632.0
+     },
+     {
+      "ts_code": "002035.SZ",
+      "name": "华帝股份",
+      "first_seal_time": "094845",
+      "order_amount": 23225904.0
+     },
+     {
+      "ts_code": "600386.SH",
+      "name": "北巴传媒",
+      "first_seal_time": "095108",
+      "order_amount": 16661198.0
+     },
+     {
+      "ts_code": "001318.SZ",
+      "name": "阳光乳业",
+      "first_seal_time": "095703",
+      "order_amount": 12736944.0
+     },
+     {
+      "ts_code": "601929.SH",
+      "name": "吉视传媒",
+      "first_seal_time": "101212",
+      "order_amount": 137093797.0
+     },
+     {
+      "ts_code": "002058.SZ",
+      "name": "紫竹高科",
+      "first_seal_time": "101827",
+      "order_amount": 51600640.0
+     },
+     {
+      "ts_code": "300530.SZ",
+      "name": "领湃科技",
+      "first_seal_time": "103557",
+      "order_amount": 98337305.0
+     },
+     {
+      "ts_code": "603983.SH",
+      "name": "丸美生物",
+      "first_seal_time": "103613",
+      "order_amount": 63040032.0
+     },
+     {
+      "ts_code": "002959.SZ",
+      "name": "小熊电器",
+      "first_seal_time": "104254",
+      "order_amount": 34335249.0
+     },
+     {
+      "ts_code": "300824.SZ",
+      "name": "北鼎股份",
+      "first_seal_time": "104509",
+      "order_amount": 2914970.0
+     },
+     {
+      "ts_code": "000156.SZ",
+      "name": "华数传媒",
+      "first_seal_time": "105330",
+      "order_amount": 29031747.0
+     },
+     {
+      "ts_code": "000533.SZ",
+      "name": "顺钠股份",
+      "first_seal_time": "111409",
+      "order_amount": 95628485.0
+     },
+     {
+      "ts_code": "000628.SZ",
+      "name": "高新发展",
+      "first_seal_time": "111451",
+      "order_amount": 93937900.0
+     },
+     {
+      "ts_code": "603118.SH",
+      "name": "共进股份",
+      "first_seal_time": "112214",
+      "order_amount": 80611991.0
+     },
+     {
+      "ts_code": "002861.SZ",
+      "name": "瀛通通讯",
+      "first_seal_time": "130557",
+      "order_amount": 58792691.0
+     }
+    ]
+   }
+  ],
+  "items": [
+   {
+    "ts_code": "002148.SZ",
+    "name": "北纬科技",
+    "industry": "通信服务",
+    "first_seal_time": "092500",
+    "last_seal_time": "140200",
+    "open_num": 7,
+    "order_amount": 26496557.0,
+    "circ_mv": 3946482846.25,
+    "seal_ratio": 0.006713967355813386,
+    "lianban_height": 4,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002187.SZ",
+    "name": "广百股份",
+    "industry": "一般零售",
+    "first_seal_time": "093003",
+    "last_seal_time": "093003",
+    "open_num": 0,
+    "order_amount": 199469394.0,
+    "circ_mv": 5375861835.11,
+    "seal_ratio": 0.03710463552043995,
+    "lianban_height": 3,
+    "fillability": "very_hard"
+   },
+   {
+    "ts_code": "002205.SZ",
+    "name": "国统股份",
+    "industry": "水泥",
+    "first_seal_time": "093445",
+    "last_seal_time": "145406",
+    "open_num": 5,
+    "order_amount": 12299162.0,
+    "circ_mv": 2642690702.1600003,
+    "seal_ratio": 0.004654030072436133,
+    "lianban_height": 3,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "000819.SZ",
+    "name": "岳阳兴长",
+    "industry": "炼化及贸",
+    "first_seal_time": "092500",
+    "last_seal_time": "144900",
+    "open_num": 10,
+    "order_amount": 20212660.0,
+    "circ_mv": 5160883494.599999,
+    "seal_ratio": 0.003916511585884309,
+    "lianban_height": 2,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002905.SZ",
+    "name": "金逸影视",
+    "industry": "影视院线",
+    "first_seal_time": "092500",
+    "last_seal_time": "092500",
+    "open_num": 0,
+    "order_amount": 115834447.0,
+    "circ_mv": 3805401600.0,
+    "seal_ratio": 0.03043948029033256,
+    "lianban_height": 2,
+    "fillability": "very_hard"
+   },
+   {
+    "ts_code": "002425.SZ",
+    "name": "凯撒文化",
+    "industry": "游戏Ⅱ",
+    "first_seal_time": "093000",
+    "last_seal_time": "093824",
+    "open_num": 1,
+    "order_amount": 108632975.0,
+    "circ_mv": 4012010624.28,
+    "seal_ratio": 0.027076941008723123,
+    "lianban_height": 2,
+    "fillability": "very_hard"
+   },
+   {
+    "ts_code": "002548.SZ",
+    "name": "金新农",
+    "industry": "饲料",
+    "first_seal_time": "093000",
+    "last_seal_time": "093000",
+    "open_num": 0,
+    "order_amount": 27617170.0,
+    "circ_mv": 3386824981.32,
+    "seal_ratio": 0.00815429499673654,
+    "lianban_height": 2,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "600715.SH",
+    "name": "文投控股",
+    "industry": "游戏Ⅱ",
+    "first_seal_time": "093024",
+    "last_seal_time": "145442",
+    "open_num": 8,
+    "order_amount": 28809968.0,
+    "circ_mv": 10705272181.34,
+    "seal_ratio": 0.0026911943491000337,
+    "lianban_height": 2,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002685.SZ",
+    "name": "华东重机",
+    "industry": "工程机械",
+    "first_seal_time": "093309",
+    "last_seal_time": "110121",
+    "open_num": 2,
+    "order_amount": 163517998.0,
+    "circ_mv": 6136218934.44,
+    "seal_ratio": 0.026648005839922478,
+    "lianban_height": 2,
+    "fillability": "very_hard"
+   },
+   {
+    "ts_code": "002748.SZ",
+    "name": "世龙实业",
+    "industry": "化学原料",
+    "first_seal_time": "102339",
+    "last_seal_time": "103609",
+    "open_num": 2,
+    "order_amount": 38502092.0,
+    "circ_mv": 3271200000.0,
+    "seal_ratio": 0.0117700207874786,
+    "lianban_height": 2,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "000595.SZ",
+    "name": "新能股份",
+    "industry": "电力",
+    "first_seal_time": "111451",
+    "last_seal_time": "144712",
+    "open_num": 5,
+    "order_amount": 18319648.0,
+    "circ_mv": 6923030705.28,
+    "seal_ratio": 0.002646189043481798,
+    "lianban_height": 2,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002419.SZ",
+    "name": "天虹股份",
+    "industry": "一般零售",
+    "first_seal_time": "093233",
+    "last_seal_time": "093409",
+    "open_num": 2,
+    "order_amount": 57362499.0,
+    "circ_mv": 6162694363.8,
+    "seal_ratio": 0.009308022694902805,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002356.SZ",
+    "name": "鹏飞绿能",
+    "industry": "一般零售",
+    "first_seal_time": "093600",
+    "last_seal_time": "142751",
+    "open_num": 3,
+    "order_amount": 19039431.0,
+    "circ_mv": 3304342492.92,
+    "seal_ratio": 0.005761942365476506,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "605378.SH",
+    "name": "野马电池",
+    "industry": "电池",
+    "first_seal_time": "093649",
+    "last_seal_time": "093649",
+    "open_num": 0,
+    "order_amount": 41228880.0,
+    "circ_mv": 4056096128.0,
+    "seal_ratio": 0.010164670337911675,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "601188.SH",
+    "name": "龙江交通",
+    "industry": "铁路公路",
+    "first_seal_time": "093828",
+    "last_seal_time": "095546",
+    "open_num": 2,
+    "order_amount": 82480708.0,
+    "circ_mv": 6174872697.950001,
+    "seal_ratio": 0.013357475050033471,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "600822.SH",
+    "name": "上海物贸",
+    "industry": "汽车服务",
+    "first_seal_time": "094634",
+    "last_seal_time": "094634",
+    "open_num": 0,
+    "order_amount": 41098976.0,
+    "circ_mv": 3743597730.6,
+    "seal_ratio": 0.010978470166294529,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "600936.SH",
+    "name": "北投科技",
+    "industry": "IT服务Ⅱ",
+    "first_seal_time": "094741",
+    "last_seal_time": "094741",
+    "open_num": 0,
+    "order_amount": 64438260.0,
+    "circ_mv": 6717525480.78,
+    "seal_ratio": 0.009592559073183866,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "000521.SZ",
+    "name": "长虹美菱",
+    "industry": "白色家电",
+    "first_seal_time": "094745",
+    "last_seal_time": "094745",
+    "open_num": 0,
+    "order_amount": 13219632.0,
+    "circ_mv": 3772495003.8399997,
+    "seal_ratio": 0.0035042145812105296,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002035.SZ",
+    "name": "华帝股份",
+    "industry": "厨卫电器",
+    "first_seal_time": "094845",
+    "last_seal_time": "105409",
+    "open_num": 3,
+    "order_amount": 23225904.0,
+    "circ_mv": 3659936281.56,
+    "seal_ratio": 0.006345985889705233,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "600386.SH",
+    "name": "北巴传媒",
+    "industry": "汽车服务",
+    "first_seal_time": "095108",
+    "last_seal_time": "095108",
+    "open_num": 0,
+    "order_amount": 16661198.0,
+    "circ_mv": 3072384000.0,
+    "seal_ratio": 0.005422889196142149,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "001318.SZ",
+    "name": "阳光乳业",
+    "industry": "饮料乳品",
+    "first_seal_time": "095703",
+    "last_seal_time": "143215",
+    "open_num": 1,
+    "order_amount": 12736944.0,
+    "circ_mv": 4132489200.0,
+    "seal_ratio": 0.0030821481638717892,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "601929.SH",
+    "name": "吉视传媒",
+    "industry": "电视广播",
+    "first_seal_time": "101212",
+    "last_seal_time": "101212",
+    "open_num": 0,
+    "order_amount": 137093797.0,
+    "circ_mv": 10329772977.28,
+    "seal_ratio": 0.013271714422140094,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "002058.SZ",
+    "name": "紫竹高科",
+    "industry": "电池",
+    "first_seal_time": "101827",
+    "last_seal_time": "101827",
+    "open_num": 0,
+    "order_amount": 51600640.0,
+    "circ_mv": 3211394636.7999997,
+    "seal_ratio": 0.016067984734326378,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "300530.SZ",
+    "name": "领湃科技",
+    "industry": "电池",
+    "first_seal_time": "103557",
+    "last_seal_time": "103557",
+    "open_num": 0,
+    "order_amount": 98337305.0,
+    "circ_mv": 4785406181.82,
+    "seal_ratio": 0.020549416551846403,
+    "lianban_height": 1,
+    "fillability": "very_hard"
+   },
+   {
+    "ts_code": "603983.SH",
+    "name": "丸美生物",
+    "industry": "化妆品",
+    "first_seal_time": "103613",
+    "last_seal_time": "105058",
+    "open_num": 2,
+    "order_amount": 63040032.0,
+    "circ_mv": 10718730000.0,
+    "seal_ratio": 0.005881296758104738,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "002959.SZ",
+    "name": "小熊电器",
+    "industry": "小家电",
+    "first_seal_time": "104254",
+    "last_seal_time": "104254",
+    "open_num": 0,
+    "order_amount": 34335249.0,
+    "circ_mv": 5070342525.3,
+    "seal_ratio": 0.006771780965225513,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "300824.SZ",
+    "name": "北鼎股份",
+    "industry": "小家电",
+    "first_seal_time": "104509",
+    "last_seal_time": "142806",
+    "open_num": 8,
+    "order_amount": 2914970.0,
+    "circ_mv": 2743126098.6,
+    "seal_ratio": 0.0010626452795909395,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "000156.SZ",
+    "name": "华数传媒",
+    "industry": "电视广播",
+    "first_seal_time": "105330",
+    "last_seal_time": "140818",
+    "open_num": 3,
+    "order_amount": 29031747.0,
+    "circ_mv": 14516939989.579998,
+    "seal_ratio": 0.0019998530696440486,
+    "lianban_height": 1,
+    "fillability": "hard"
+   },
+   {
+    "ts_code": "000533.SZ",
+    "name": "顺钠股份",
+    "industry": "电网设备",
+    "first_seal_time": "111409",
+    "last_seal_time": "111409",
+    "open_num": 0,
+    "order_amount": 95628485.0,
+    "circ_mv": 6725741568.0,
+    "seal_ratio": 0.014218281216005236,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "000628.SZ",
+    "name": "高新发展",
+    "industry": "房屋建设",
+    "first_seal_time": "111451",
+    "last_seal_time": "111533",
+    "open_num": 1,
+    "order_amount": 93937900.0,
+    "circ_mv": 8948706131.75,
+    "seal_ratio": 0.010497372314720274,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "603118.SH",
+    "name": "共进股份",
+    "industry": "通信设备",
+    "first_seal_time": "112214",
+    "last_seal_time": "144459",
+    "open_num": 1,
+    "order_amount": 80611991.0,
+    "circ_mv": 11580835932.26,
+    "seal_ratio": 0.006960809346710827,
+    "lianban_height": 1,
+    "fillability": "possible"
+   },
+   {
+    "ts_code": "002861.SZ",
+    "name": "瀛通通讯",
+    "industry": "消费电子",
+    "first_seal_time": "130557",
+    "last_seal_time": "130557",
+    "open_num": 0,
+    "order_amount": 58792691.0,
+    "circ_mv": 1931257160.8,
+    "seal_ratio": 0.03044270446906503,
+    "lianban_height": 1,
+    "fillability": "very_hard"
+   }
+  ],
+  "history": {
+   "start": "2026-11-14 00:00:00",
+   "days": 3,
+   "note": "AKShare 涨停池仅提供近期数据；历史自首次运行起每日 append-only 沉淀，长期历史不可回溯"
+  },
+  "premium": {
+   "theoretical": 0.00992091311348809,
+   "tradable_sample": 0.00992091311348809,
+   "sample_n": 36,
+   "note": "theoretical=昨日涨停股今日平均涨跌幅（含不可成交样本）；tradable_sample=剔除早盘封板后的样本均值"
+  },
+  "touched_from_bars": {
+   "stocks_with_bar": 5221,
+   "status": "ok"
+  },
+  "status": "ok"
+ }
+}

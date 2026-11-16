@@ -1,0 +1,258 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at_sh": "2026-11-16T17:14:17+08:00",
+  "quality_tier": "APPROX_HISTORY",
+  "status": "partial",
+  "model_version": "system_v0.1.0",
+  "sources": [
+   "duckdb"
+  ],
+  "warnings": [],
+  "confidence": null,
+  "stale": false,
+  "missing_indicators": []
+ },
+ "data": {
+  "overall": "partial",
+  "datasets": [
+   {
+    "dataset_id": "sector_snapshot_metrics",
+    "as_of": "2026-11-16 00:00:00",
+    "status": "ok",
+    "rows": 49,
+    "null_ratio": 0.272727,
+    "quality_tier": "APPROX_HISTORY",
+    "warnings": [],
+    "checked_at": "2026-11-16 17:11:58.573410"
+   },
+   {
+    "dataset_id": "industry_master",
+    "as_of": "2026-11-16 00:00:00",
+    "status": "ok",
+    "rows": 49,
+    "null_ratio": 0.0,
+    "quality_tier": "LIVE_CURRENT",
+    "warnings": [],
+    "checked_at": "2026-11-16 17:11:55.980422"
+   },
+   {
+    "dataset_id": "index_daily",
+    "as_of": "2026-11-16 00:00:00",
+    "status": "ok",
+    "rows": 42919,
+    "null_ratio": 0.071429,
+    "quality_tier": "APPROX_HISTORY",
+    "warnings": [],
+    "checked_at": "2026-11-16 17:11:51.917621"
+   },
+   {
+    "dataset_id": "quote_snapshot",
+    "as_of": "2026-11-16 00:00:00",
+    "status": "ok",
+    "rows": 5221,
+    "null_ratio": 0.055556,
+    "quality_tier": "LIVE_CURRENT",
+    "warnings": [],
+    "checked_at": "2026-11-16 17:11:47.312784"
+   },
+   {
+    "dataset_id": "daily_bar_raw",
+    "as_of": "2026-11-13 00:00:00",
+    "status": "ok",
+    "rows": 3423215,
+    "null_ratio": 0.05023,
+    "quality_tier": "APPROX_HISTORY",
+    "warnings": [],
+    "checked_at": "2026-11-15 21:09:56.764197"
+   },
+   {
+    "dataset_id": "financial_statement_raw",
+    "as_of": "2026-09-30 00:00:00",
+    "status": "ok",
+    "rows": 5226,
+    "null_ratio": 0.046933,
+    "quality_tier": "LIVE_CURRENT",
+    "warnings": [],
+    "checked_at": "2026-11-15 13:49:49.709566"
+   },
+   {
+    "dataset_id": "sector_snapshot_metrics",
+    "as_of": "2026-11-15 00:00:00",
+    "status": "degraded",
+    "rows": 0,
+    "null_ratio": 0.0,
+    "quality_tier": "APPROX_HISTORY",
+    "warnings": [
+     "行数 0 < 期望 10"
+    ],
+    "checked_at": "2026-11-15 12:11:20.776858"
+   },
+   {
+    "dataset_id": "industry_master",
+    "as_of": "2026-11-15 00:00:00",
+    "status": "ok",
+    "rows": 49,
+    "null_ratio": 0.0,
+    "quality_tier": "LIVE_CURRENT",
+    "warnings": [],
+    "checked_at": "2026-11-15 12:11:20.211205"
+   },
+   {
+    "dataset_id": "index_daily",
+    "as_of": "2026-11-15 00:00:00",
+    "status": "ok",
+    "rows": 42919,
+    "null_ratio": 0.071429,
+    "quality_tier": "APPROX_HISTORY",
+    "warnings": [],
+    "checked_at": "2026-11-15 12:10:57.337648"
+   },
+   {
+    "dataset_id": "quote_snapshot",
+    "as_of": "2026-11-15 00:00:00",
+    "status": "ok",
+    "rows": 5219,
+    "null_ratio": 0.055556,
+    "quality_tier": "LIVE_CURRENT",
+    "warnings": [],
+    "checked_at": "2026-11-15 12:10:47.790005"
+   },
+   {
+    "dataset_id": "financial_statement_raw",
+    "as_of": "2026-06-30 00:00:00",
+    "status": "ok",
+    "rows": 5230,
+    "null_ratio": 0.244463,
+    "quality_tier": "LIVE_CURRENT",
+    "warnings": [],
+    "checked_at": "2026-11-15 03:24:07.062801"
+   },
+   {
+    "dataset_id": "daily_bar_raw",
+    "as_of": "2026-11-15 00:00:00",
+    "status": "ok",
+    "rows": 879742,
+    "null_ratio": 0.053269,
+    "quality_tier": "APPROX_HISTORY",
+    "warnings": [],
+    "checked_at": "2026-11-15 03:09:44.318368"
+   }
+  ],
+  "runs": [
+   {
+    "run_id": "20261116T171132-update-daily-tx-7c64c4",
+    "job": "update-daily-tx",
+    "status": "ok",
+    "started_at": "2026-11-16 17:11:32.864438",
+    "duration_s": 29.980818,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261116\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5221, \"bar_rows\": 5221, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 1.0, \"master_rows\": 5221, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error"
+   },
+   {
+    "run_id": "20261116T165118-update-daily-tx-9bd912",
+    "job": "update-daily-tx",
+    "status": "ok",
+    "started_at": "2026-11-16 16:51:18.947499",
+    "duration_s": 30.760588,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261116\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5221, \"bar_rows\": 5221, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 1.0, \"master_rows\": 5221, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error"
+   },
+   {
+    "run_id": "20261116T161629-update-daily-tx-c4215e",
+    "job": "update-daily-tx",
+    "status": "ok",
+    "started_at": "2026-11-16 16:16:29.143005",
+    "duration_s": 37.691747,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261116\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5221, \"bar_rows\": 5221, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 1.0, \"master_rows\": 5221, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error"
+   },
+   {
+    "run_id": "20261116T153253-update-daily-tx-5629ec",
+    "job": "update-daily-tx",
+    "status": "ok",
+    "started_at": "2026-11-16 15:32:53.828503",
+    "duration_s": 89.386058,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261116\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5221, \"bar_rows\": 5221, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 1.0, \"master_rows\": 5221, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error"
+   },
+   {
+    "run_id": "20261115T121032-update-daily-tx-53f4b5",
+    "job": "update-daily-tx",
+    "status": "ok",
+    "started_at": "2026-11-15 12:10:32.828810",
+    "duration_s": 57.432046,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261115\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5219, \"bar_rows\": 5219, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 0.999, \"master_rows\": 0, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error\""
+   },
+   {
+    "run_id": "20261115T120707-update-daily-tx-93bf5f",
+    "job": "update-daily-tx",
+    "status": "failed",
+    "started_at": "2026-11-15 12:07:07.208012",
+    "duration_s": 52.876125,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261115\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5219, \"bar_rows\": 5219, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 0.999, \"master_rows\": 0, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error\""
+   },
+   {
+    "run_id": "20261115T120533-update-daily-tx-966c77",
+    "job": "update-daily-tx",
+    "status": "failed",
+    "started_at": "2026-11-15 12:05:35.418067",
+    "duration_s": 51.577385,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261115\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5219, \"bar_rows\": 5219, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 0.999, \"master_rows\": 0, \"index\": {\"rows\": 42919, \"ok\": 8, \"failed\": []}, \"sectors\": {\"industry\": {\"sectors\": 49, \"members_fetched\": 49, \"member_rows\": 2916, \"failed\": []}, \"concept\": {\"status\": \"unavailable\", \"error\""
+   },
+   {
+    "run_id": "20261115T120339-update-daily-tx-bc6c5c",
+    "job": "update-daily-tx",
+    "status": "failed",
+    "started_at": "2026-11-15 12:03:39.275330",
+    "duration_s": 12.843016,
+    "detail": "{\"pipeline\": \"sina_bulk + tencent\", \"as_of\": \"20261115\", \"universe_total\": 5223, \"quote\": {\"quote_rows\": 5219, \"bar_rows\": 5219, \"symbols\": 5223, \"failed\": 0}, \"quote_success_ratio\": 0.999, \"master_rows\": 0, \"error\": \"NameError: name 'INDEX_LIST_SINA' is not defined\"}"
+   },
+   {
+    "run_id": "20261115T031216-backfill-bars-d85ae4",
+    "job": "backfill-bars",
+    "status": "ok",
+    "started_at": "2026-11-15 03:12:16.083258",
+    "duration_s": 341.481902,
+    "detail": "{\"start\": \"20250301\", \"end\": \"20261115\", \"universe\": 2911, \"quote_missing\": 191, \"quote\": {\"quote_rows\": 0, \"bar_rows\": 0, \"symbols\": 191, \"failed\": 0}, \"bars\": {\"symbols\": 2911, \"ok\": 0, \"failed\": 2911, \"failed_sample\": [{\"ts_code\": \"000013.SZ\", \"error\": \"TimeoutError: HTTP 失败 https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz000013,day,2025-03-01: OSError: HTTP 501\"}, {\"ts_code\": \"00000"
+   },
+   {
+    "run_id": "20261115T030847-backfill-bars-69ec84",
+    "job": "backfill-bars",
+    "status": "failed",
+    "started_at": "2026-11-15 03:08:47.196333",
+    "duration_s": 57.928579,
+    "detail": "{\"start\": \"20250301\", \"end\": \"20261115\", \"concepts\": {\"concept\": {\"status\": \"unavailable\", \"error\": \"UnboundLocalError: cannot access local variable 'r' where it is not associated with a value\"}}, \"universe\": 2911, \"quote_missing\": 191, \"quote\": {\"quote_rows\": 0, \"bar_rows\": 0, \"symbols\": 191, \"failed\": 0}, \"bars\": {\"symbols\": 2911, \"ok\": 2663, \"failed\": 248, \"failed_sample\": [{\"ts_code\": \"000003."
+   },
+   {
+    "run_id": "20261115T030611-backfill-bars-de99c2",
+    "job": "backfill-bars",
+    "status": "failed",
+    "started_at": "2026-11-15 03:06:11.470159",
+    "duration_s": 4.960519,
+    "detail": "{\"start\": \"20250301\", \"end\": null, \"concepts\": {\"concept\": {\"status\": \"unavailable\", \"error\": \"UnboundLocalError: cannot access local variable 'r' where it is not associated with a value\"}}, \"universe\": 2911, \"quote_missing\": 2911, \"error\": \"ConstraintException: Constraint Error: NOT NULL constraint failed: quote_snapshot.as_of\"}"
+   },
+   {
+    "run_id": "20261115T025101-bootstrap-tx-0a33a5",
+    "job": "bootstrap-tx",
+    "status": "abandoned",
+    "started_at": "2026-11-15 02:51:01.617668",
+    "duration_s": null,
+    "detail": ""
+   }
+  ],
+  "model_versions": {
+   "sentiment": "sentiment_v0.3.0",
+   "sector_heat": "sector_heat_v0.1.0",
+   "screen": "screen_general_v0.1.0"
+  },
+  "disk": {
+   "db_mb": 462.96
+  },
+  "akshare_version": "1.20.63",
+  "dates": {
+   "latest_natural_day": "2026-11-16",
+   "latest_trading_day": "2026-11-16",
+   "data_trade_date": "2026-11-16",
+   "breadth_trade_date": "2026-11-16",
+   "is_trading_day_today": true,
+   "note": "自然日与交易日不同；非交易日运行时数据日期会回退到最近交易日"
+  }
+ }
+}

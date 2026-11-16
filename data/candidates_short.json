@@ -1,0 +1,2651 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at_sh": "2026-11-16T17:14:16+08:00",
+  "quality_tier": "APPROX_HISTORY",
+  "status": "ok",
+  "model_version": "screen_general_v0.1.0",
+  "sources": [
+   "tencent:fqkline 历史日线",
+   "sina:stock_sector_detail 行业归属（当前快照）",
+   "eastmoney:stock_zcfz_em / stock_lrb_em / stock_xjll_em / stock_yjbb_em 财务（含公告日期）"
+  ],
+  "warnings": [],
+  "confidence": 0.9934,
+  "stale": false,
+  "missing_indicators": []
+ },
+ "data": {
+  "horizon": "short",
+  "page_title": "低位优质候选",
+  "degraded": false,
+  "degrade_reason": null,
+  "coverage": {
+   "quality": 0.9934
+  },
+  "funnel": {
+   "universe": 5288,
+   "after_hard_filter": 3099,
+   "passed_gate": 282
+  },
+  "items": [
+   {
+    "ts_code": "301538.SZ",
+    "name": "骏鼎达",
+    "low_position": 96.77,
+    "quality": 65.46,
+    "quality_coverage": 1.0,
+    "valuation": 55.8,
+    "technical": 80.02,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 35.74,
+    "candidate_score": 75.12,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 70.6%",
+      "values": {
+       "drawdown": 0.71,
+       "price_pctl_250d": 0.04
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 4%",
+      "values": {
+       "price_pctl_250d": 0.04
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +2.31%",
+      "values": {
+       "ma20_slope": 0.02,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 7.3%",
+      "values": {
+       "roe": 0.07,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-24"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +9.9%",
+      "values": {
+       "revenue_yoy": 0.1,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.58（当期截面分位 56%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.58,
+       "pe": 35.74,
+       "valuation_pctl_current": 0.56,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-24"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "利润同比 -20.6%，基本面仍在恶化",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-24",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-24"
+   },
+   {
+    "ts_code": "300861.SZ",
+    "name": "美畅股份",
+    "low_position": 90.65,
+    "quality": 71.1,
+    "quality_coverage": 1.0,
+    "valuation": 93.84,
+    "technical": 44.73,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 28.67,
+    "candidate_score": 73.66,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 55.4%",
+      "values": {
+       "drawdown": 0.55,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -1.33%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 4.5%",
+      "values": {
+       "roe": 0.04,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-28"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +11.2%",
+      "values": {
+       "revenue_yoy": 0.11,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.29（当期截面分位 94%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.29,
+       "pe": 28.67,
+       "valuation_pctl_current": 0.94,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-28"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-28",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-28"
+   },
+   {
+    "ts_code": "301363.SZ",
+    "name": "美好医疗",
+    "low_position": 88.05,
+    "quality": 70.71,
+    "quality_coverage": 1.0,
+    "valuation": 37.25,
+    "technical": 88.08,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 56.38,
+    "candidate_score": 73.11,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 62.2%",
+      "values": {
+       "drawdown": 0.62,
+       "price_pctl_250d": 0.17
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 17%",
+      "values": {
+       "price_pctl_250d": 0.17
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +2.45%",
+      "values": {
+       "ma20_slope": 0.02,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 6.2%",
+      "values": {
+       "roe": 0.06,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +14.1%",
+      "values": {
+       "revenue_yoy": 0.14,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 3.44（当期截面分位 37%）· 口径 derived_report_period",
+      "values": {
+       "pb": 3.44,
+       "pe": 56.38,
+       "valuation_pctl_current": 0.37,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-23"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-23",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-23"
+   },
+   {
+    "ts_code": "301330.SZ",
+    "name": "熵基科技",
+    "low_position": 74.3,
+    "quality": 65.12,
+    "quality_coverage": 1.0,
+    "valuation": 81.38,
+    "technical": 71.32,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 46.89,
+    "candidate_score": 72.01,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 50.9%",
+      "values": {
+       "drawdown": 0.51,
+       "price_pctl_250d": 0.19
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 19%",
+      "values": {
+       "price_pctl_250d": 0.19
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.97%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 3.6%",
+      "values": {
+       "roe": 0.04,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-29"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +23.5%",
+      "values": {
+       "revenue_yoy": 0.23,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.70（当期截面分位 81%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.7,
+       "pe": 46.89,
+       "valuation_pctl_current": 0.81,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-29"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "利润同比 -3.3%，基本面仍在恶化",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-29",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-29"
+   },
+   {
+    "ts_code": "300908.SZ",
+    "name": "仲景食品",
+    "low_position": 73.12,
+    "quality": 72.7,
+    "quality_coverage": 1.0,
+    "valuation": 69.27,
+    "technical": 70.93,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 22.27,
+    "candidate_score": 71.72,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 42.7%",
+      "values": {
+       "drawdown": 0.43,
+       "price_pctl_250d": 0.11
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 11%",
+      "values": {
+       "price_pctl_250d": 0.11
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.79%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 9.4%",
+      "values": {
+       "roe": 0.09,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-20"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +7.3%",
+      "values": {
+       "revenue_yoy": 0.07,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.10（当期截面分位 69%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.1,
+       "pe": 22.27,
+       "valuation_pctl_current": 0.69,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-20"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-20",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-20"
+   },
+   {
+    "ts_code": "301246.SZ",
+    "name": "宏源药业",
+    "low_position": 84.51,
+    "quality": 69.81,
+    "quality_coverage": 1.0,
+    "valuation": 94.13,
+    "technical": 44.36,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 31.92,
+    "candidate_score": 71.68,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 58.3%",
+      "values": {
+       "drawdown": 0.58,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -1.17%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 4.0%",
+      "values": {
+       "roe": 0.04,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-28"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +47.4%",
+      "values": {
+       "revenue_yoy": 0.47,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.28（当期截面分位 94%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.28,
+       "pe": 31.92,
+       "valuation_pctl_current": 0.94,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-28"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-28",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-28"
+   },
+   {
+    "ts_code": "002466.SZ",
+    "name": "天齐锂业",
+    "low_position": 86.57,
+    "quality": 88.86,
+    "quality_coverage": 1.0,
+    "valuation": 77.75,
+    "technical": 43.03,
+    "sector": 43.04,
+    "sector_name": "化工行业",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 10.16,
+    "candidate_score": 71.22,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 59.4%",
+      "values": {
+       "drawdown": 0.59,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -1.49%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 12.0%",
+      "values": {
+       "roe": 0.12,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-26"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +147.1%",
+      "values": {
+       "revenue_yoy": 1.47,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.17（当期截面分位 78%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.17,
+       "pe": 10.16,
+       "valuation_pctl_current": 0.78,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-26"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：化工行业",
+      "values": {
+       "sector": "化工行业"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-26",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-26"
+   },
+   {
+    "ts_code": "300584.SZ",
+    "name": "海辰药业",
+    "low_position": 79.79,
+    "quality": 75.52,
+    "quality_coverage": 1.0,
+    "valuation": 41.91,
+    "technical": 78.12,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 56.26,
+    "candidate_score": 70.93,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 60.2%",
+      "values": {
+       "drawdown": 0.6,
+       "price_pctl_250d": 0.03
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 3%",
+      "values": {
+       "price_pctl_250d": 0.03
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +1.80%",
+      "values": {
+       "ma20_slope": 0.02,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 5.8%",
+      "values": {
+       "roe": 0.06,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +30.5%",
+      "values": {
+       "revenue_yoy": 0.3,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 3.21（当期截面分位 42%）· 口径 derived_report_period",
+      "values": {
+       "pb": 3.21,
+       "pe": 56.26,
+       "valuation_pctl_current": 0.42,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-23"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-23",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-23"
+   },
+   {
+    "ts_code": "600426.SH",
+    "name": "华鲁恒升",
+    "low_position": 92.52,
+    "quality": 67.86,
+    "quality_coverage": 1.0,
+    "valuation": 68.93,
+    "technical": 58.21,
+    "sector": 62.48,
+    "sector_name": "农药化肥",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 15.92,
+    "candidate_score": 70.78,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 58.5%",
+      "values": {
+       "drawdown": 0.59,
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 1%",
+      "values": {
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -0.28%",
+      "values": {
+       "ma20_slope": -0.0,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 9.2%",
+      "values": {
+       "roe": 0.09,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +11.5%",
+      "values": {
+       "revenue_yoy": 0.12,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.41（当期截面分位 69%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.41,
+       "pe": 15.92,
+       "valuation_pctl_current": 0.69,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：农药化肥",
+      "values": {
+       "sector": "农药化肥"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-30",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-30"
+   },
+   {
+    "ts_code": "001311.SZ",
+    "name": "多利科技",
+    "low_position": 97.43,
+    "quality": 66.28,
+    "quality_coverage": 1.0,
+    "valuation": 76.64,
+    "technical": 43.17,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 22.42,
+    "candidate_score": 70.23,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 69.0%",
+      "values": {
+       "drawdown": 0.69,
+       "price_pctl_250d": 0.02
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 2%",
+      "values": {
+       "price_pctl_250d": 0.02
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -0.34%",
+      "values": {
+       "ma20_slope": -0.0,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 5.5%",
+      "values": {
+       "roe": 0.06,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +48.8%",
+      "values": {
+       "revenue_yoy": 0.49,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.20（当期截面分位 77%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.2,
+       "pe": 22.42,
+       "valuation_pctl_current": 0.77,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   },
+   {
+    "ts_code": "002034.SZ",
+    "name": "旺能环境",
+    "low_position": 64.59,
+    "quality": 68.4,
+    "quality_coverage": 1.0,
+    "valuation": 92.1,
+    "technical": 57.11,
+    "sector": 78.48,
+    "sector_name": "纺织行业",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 10.74,
+    "candidate_score": 70.12,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 40.4%",
+      "values": {
+       "drawdown": 0.4,
+       "price_pctl_250d": 0.16
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 16%",
+      "values": {
+       "price_pctl_250d": 0.16
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +1.00%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 8.5%",
+      "values": {
+       "roe": 0.09,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +2.6%",
+      "values": {
+       "revenue_yoy": 0.03,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 0.80（当期截面分位 92%）· 口径 derived_report_period",
+      "values": {
+       "pb": 0.8,
+       "pe": 10.74,
+       "valuation_pctl_current": 0.92,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：纺织行业",
+      "values": {
+       "sector": "纺织行业"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   },
+   {
+    "ts_code": "301367.SZ",
+    "name": "瑞迈特",
+    "low_position": 92.95,
+    "quality": 71.72,
+    "quality_coverage": 1.0,
+    "valuation": 85.03,
+    "technical": 32.79,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 26.57,
+    "candidate_score": 69.79,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 60.1%",
+      "values": {
+       "drawdown": 0.6,
+       "price_pctl_250d": 0.03
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 3%",
+      "values": {
+       "price_pctl_250d": 0.03
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -3.18%",
+      "values": {
+       "ma20_slope": -0.03,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 6.0%",
+      "values": {
+       "roe": 0.06,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-28"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +34.5%",
+      "values": {
+       "revenue_yoy": 0.35,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.60（当期截面分位 85%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.6,
+       "pe": 26.57,
+       "valuation_pctl_current": 0.85,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-28"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-28",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-28"
+   },
+   {
+    "ts_code": "002738.SZ",
+    "name": "中矿资源",
+    "low_position": 90.72,
+    "quality": 81.27,
+    "quality_coverage": 1.0,
+    "valuation": 54.71,
+    "technical": 46.04,
+    "sector": 69.03,
+    "sector_name": "建筑建材",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 14.87,
+    "candidate_score": 69.76,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 66.9%",
+      "values": {
+       "drawdown": 0.67,
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 1%",
+      "values": {
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -0.89%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 12.7%",
+      "values": {
+       "roe": 0.13,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +24.9%",
+      "values": {
+       "revenue_yoy": 0.25,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.81（当期截面分位 55%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.81,
+       "pe": 14.87,
+       "valuation_pctl_current": 0.55,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：建筑建材",
+      "values": {
+       "sector": "建筑建材"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-30",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-30"
+   },
+   {
+    "ts_code": "002294.SZ",
+    "name": "信立泰",
+    "low_position": 87.88,
+    "quality": 74.08,
+    "quality_coverage": 1.0,
+    "valuation": 19.26,
+    "technical": 83.87,
+    "sector": 69.03,
+    "sector_name": "生物制药",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 50.9,
+    "candidate_score": 69.62,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 58.4%",
+      "values": {
+       "drawdown": 0.58,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -0.68%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 7.2%",
+      "values": {
+       "roe": 0.07,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +15.5%",
+      "values": {
+       "revenue_yoy": 0.15,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 3.80（当期截面分位 19%）· 口径 derived_report_period",
+      "values": {
+       "pb": 3.8,
+       "pe": 50.9,
+       "valuation_pctl_current": 0.19,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：生物制药",
+      "values": {
+       "sector": "生物制药"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   },
+   {
+    "ts_code": "301026.SZ",
+    "name": "浩通科技",
+    "low_position": 95.68,
+    "quality": 69.08,
+    "quality_coverage": 1.0,
+    "valuation": 72.78,
+    "technical": 41.61,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 18.47,
+    "candidate_score": 69.55,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 63.3%",
+      "values": {
+       "drawdown": 0.63,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -2.19%",
+      "values": {
+       "ma20_slope": -0.02,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 10.8%",
+      "values": {
+       "roe": 0.11,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +67.7%",
+      "values": {
+       "revenue_yoy": 0.68,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.98（当期截面分位 73%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.98,
+       "pe": 18.47,
+       "valuation_pctl_current": 0.73,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-23"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-23",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-23"
+   },
+   {
+    "ts_code": "300629.SZ",
+    "name": "新劲刚",
+    "low_position": 76.71,
+    "quality": 76.46,
+    "quality_coverage": 1.0,
+    "valuation": 59.1,
+    "technical": 60.44,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 91.84,
+    "candidate_score": 69.26,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 49.2%",
+      "values": {
+       "drawdown": 0.49,
+       "price_pctl_250d": 0.12
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 12%",
+      "values": {
+       "price_pctl_250d": 0.12
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +1.85%",
+      "values": {
+       "ma20_slope": 0.02,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 2.6%",
+      "values": {
+       "roe": 0.03,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-26"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +26.1%",
+      "values": {
+       "revenue_yoy": 0.26,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.47（当期截面分位 59%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.47,
+       "pe": 91.84,
+       "valuation_pctl_current": 0.59,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-26"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-26",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-26"
+   },
+   {
+    "ts_code": "600884.SH",
+    "name": "杉杉股份",
+    "low_position": 69.92,
+    "quality": 69.18,
+    "quality_coverage": 1.0,
+    "valuation": 85.85,
+    "technical": 51.59,
+    "sector": 75.28,
+    "sector_name": "服装鞋类",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 17.25,
+    "candidate_score": 68.89,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 44.1%",
+      "values": {
+       "drawdown": 0.44,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -1.05%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 5.6%",
+      "values": {
+       "roe": 0.06,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-29"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +30.7%",
+      "values": {
+       "revenue_yoy": 0.31,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 0.97（当期截面分位 86%）· 口径 derived_report_period",
+      "values": {
+       "pb": 0.97,
+       "pe": 17.25,
+       "valuation_pctl_current": 0.86,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-29"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：服装鞋类",
+      "values": {
+       "sector": "服装鞋类"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-29",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-29"
+   },
+   {
+    "ts_code": "300867.SZ",
+    "name": "圣元环保",
+    "low_position": 66.01,
+    "quality": 67.54,
+    "quality_coverage": 1.0,
+    "valuation": 98.21,
+    "technical": 49.86,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 14.11,
+    "candidate_score": 68.49,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 40.9%",
+      "values": {
+       "drawdown": 0.41,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -0.69%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 7.2%",
+      "values": {
+       "roe": 0.07,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-29"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +5.1%",
+      "values": {
+       "revenue_yoy": 0.05,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 0.98（当期截面分位 98%）· 口径 derived_report_period",
+      "values": {
+       "pb": 0.98,
+       "pe": 14.11,
+       "valuation_pctl_current": 0.98,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-29"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-29",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-29"
+   },
+   {
+    "ts_code": "300919.SZ",
+    "name": "中伟新材",
+    "low_position": 86.76,
+    "quality": 65.22,
+    "quality_coverage": 1.0,
+    "valuation": 91.12,
+    "technical": 36.67,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 18.02,
+    "candidate_score": 68.32,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 53.4%",
+      "values": {
+       "drawdown": 0.53,
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 1%",
+      "values": {
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -2.35%",
+      "values": {
+       "ma20_slope": -0.02,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 7.5%",
+      "values": {
+       "roe": 0.08,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +45.0%",
+      "values": {
+       "revenue_yoy": 0.45,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.40（当期截面分位 91%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.4,
+       "pe": 18.02,
+       "valuation_pctl_current": 0.91,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-30"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-30",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-30"
+   },
+   {
+    "ts_code": "301031.SZ",
+    "name": "中熔电气",
+    "low_position": 86.28,
+    "quality": 77.42,
+    "quality_coverage": 1.0,
+    "valuation": 13.61,
+    "technical": 79.16,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 28.08,
+    "candidate_score": 68.1,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 56.7%",
+      "values": {
+       "drawdown": 0.57,
+       "price_pctl_250d": 0.06
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 6%",
+      "values": {
+       "price_pctl_250d": 0.06
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +1.56%",
+      "values": {
+       "ma20_slope": 0.02,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 23.6%",
+      "values": {
+       "roe": 0.24,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +54.5%",
+      "values": {
+       "revenue_yoy": 0.55,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 6.03（当期截面分位 14%）· 口径 derived_report_period",
+      "values": {
+       "pb": 6.03,
+       "pe": 28.08,
+       "valuation_pctl_current": 0.14,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   },
+   {
+    "ts_code": "300595.SZ",
+    "name": "欧普康视",
+    "low_position": 71.23,
+    "quality": 65.47,
+    "quality_coverage": 1.0,
+    "valuation": 79.23,
+    "technical": 59.29,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 22.76,
+    "candidate_score": 67.94,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 40.9%",
+      "values": {
+       "drawdown": 0.41,
+       "price_pctl_250d": 0.12
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 12%",
+      "values": {
+       "price_pctl_250d": 0.12
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.48%",
+      "values": {
+       "ma20_slope": 0.0,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 8.0%",
+      "values": {
+       "roe": 0.08,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 -3.1%",
+      "values": {
+       "revenue_yoy": -0.03,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.77（当期截面分位 79%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.77,
+       "pe": 22.76,
+       "valuation_pctl_current": 0.79,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "利润同比 -8.8%，基本面仍在恶化",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   },
+   {
+    "ts_code": "002756.SZ",
+    "name": "永兴材料",
+    "low_position": 92.61,
+    "quality": 80.07,
+    "quality_coverage": 1.0,
+    "valuation": 74.01,
+    "technical": 43.35,
+    "sector": 26.26,
+    "sector_name": "其它行业",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 12.59,
+    "candidate_score": 67.71,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 63.6%",
+      "values": {
+       "drawdown": 0.64,
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 0%",
+      "values": {
+       "price_pctl_250d": 0.0
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -1.66%",
+      "values": {
+       "ma20_slope": -0.02,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 10.3%",
+      "values": {
+       "roe": 0.1,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +38.9%",
+      "values": {
+       "revenue_yoy": 0.39,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.27（当期截面分位 74%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.27,
+       "pe": 12.59,
+       "valuation_pctl_current": 0.74,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：其它行业",
+      "values": {
+       "sector": "其它行业"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-23",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-23"
+   },
+   {
+    "ts_code": "301033.SZ",
+    "name": "迈普医学",
+    "low_position": 65.51,
+    "quality": 79.82,
+    "quality_coverage": 1.0,
+    "valuation": 30.3,
+    "technical": 82.28,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 36.7,
+    "candidate_score": 67.57,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 46.1%",
+      "values": {
+       "drawdown": 0.46,
+       "price_pctl_250d": 0.1
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 10%",
+      "values": {
+       "price_pctl_250d": 0.1
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +1.27%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 10.9%",
+      "values": {
+       "roe": 0.11,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-22"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +18.1%",
+      "values": {
+       "revenue_yoy": 0.18,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 3.88（当期截面分位 30%）· 口径 derived_report_period",
+      "values": {
+       "pb": 3.88,
+       "pe": 36.7,
+       "valuation_pctl_current": 0.3,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-22"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-22",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-22"
+   },
+   {
+    "ts_code": "301548.SZ",
+    "name": "崇德科技",
+    "low_position": 88.66,
+    "quality": 70.41,
+    "quality_coverage": 1.0,
+    "valuation": 59.74,
+    "technical": 48.42,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 36.0,
+    "candidate_score": 67.47,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 56.9%",
+      "values": {
+       "drawdown": 0.57,
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 1%",
+      "values": {
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.06%",
+      "values": {
+       "ma20_slope": 0.0,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 6.8%",
+      "values": {
+       "roe": 0.07,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-29"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +24.2%",
+      "values": {
+       "revenue_yoy": 0.24,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.44（当期截面分位 60%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.44,
+       "pe": 36.0,
+       "valuation_pctl_current": 0.6,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-29"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-29",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-29"
+   },
+   {
+    "ts_code": "301587.SZ",
+    "name": "中瑞股份",
+    "low_position": 61.67,
+    "quality": 72.07,
+    "quality_coverage": 1.0,
+    "valuation": 87.54,
+    "technical": 51.99,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 53.56,
+    "candidate_score": 67.35,
+    "group": "g_value_repair",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 31.7%",
+      "values": {
+       "drawdown": 0.32,
+       "price_pctl_250d": 0.12
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 12%",
+      "values": {
+       "price_pctl_250d": 0.12
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.15%",
+      "values": {
+       "ma20_slope": 0.0,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 2.8%",
+      "values": {
+       "roe": 0.03,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +46.5%",
+      "values": {
+       "revenue_yoy": 0.46,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.51（当期截面分位 88%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.51,
+       "pe": 53.56,
+       "valuation_pctl_current": 0.88,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   },
+   {
+    "ts_code": "301683.SZ",
+    "name": "慧谷新材",
+    "low_position": 77.45,
+    "quality": 74.22,
+    "quality_coverage": 1.0,
+    "valuation": 63.18,
+    "technical": 84.03,
+    "sector": 1.63,
+    "sector_name": "次新股",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 29.15,
+    "candidate_score": 67.21,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 43.5%",
+      "values": {
+       "drawdown": 0.44,
+       "price_pctl_250d": 0.03
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 3%",
+      "values": {
+       "price_pctl_250d": 0.03
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +1.06%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 9.1%",
+      "values": {
+       "roe": 0.09,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +24.2%",
+      "values": {
+       "revenue_yoy": 0.24,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.33（当期截面分位 63%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.33,
+       "pe": 29.15,
+       "valuation_pctl_current": 0.63,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-23"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：次新股",
+      "values": {
+       "sector": "次新股"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-23",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-23"
+   },
+   {
+    "ts_code": "300286.SZ",
+    "name": "安科瑞",
+    "low_position": 80.53,
+    "quality": 67.03,
+    "quality_coverage": 1.0,
+    "valuation": 73.35,
+    "technical": 58.65,
+    "sector": 47.85,
+    "sector_name": "仪器仪表",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 24.84,
+    "candidate_score": 67.09,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 50.2%",
+      "values": {
+       "drawdown": 0.5,
+       "price_pctl_250d": 0.08
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 8%",
+      "values": {
+       "price_pctl_250d": 0.08
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.92%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 7.9%",
+      "values": {
+       "roe": 0.08,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +10.9%",
+      "values": {
+       "revenue_yoy": 0.11,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 1.97（当期截面分位 73%）· 口径 derived_report_period",
+      "values": {
+       "pb": 1.97,
+       "pe": 24.84,
+       "valuation_pctl_current": 0.73,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-30"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：仪器仪表",
+      "values": {
+       "sector": "仪器仪表"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "利润同比 -4.7%，基本面仍在恶化",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-30",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-30"
+   },
+   {
+    "ts_code": "000858.SZ",
+    "name": "五 粮 液",
+    "low_position": 64.54,
+    "quality": 71.17,
+    "quality_coverage": 1.0,
+    "valuation": 38.46,
+    "technical": 71.51,
+    "sector": 92.78,
+    "sector_name": "酿酒行业",
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 29.43,
+    "candidate_score": 66.72,
+    "group": null,
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 39.8%",
+      "values": {
+       "drawdown": 0.4,
+       "price_pctl_250d": 0.24
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 24%",
+      "values": {
+       "price_pctl_250d": 0.24
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.60%",
+      "values": {
+       "ma20_slope": 0.01,
+       "no_new_low_20d": true
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 8.1%",
+      "values": {
+       "roe": 0.08,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-28"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +7.2%",
+      "values": {
+       "revenue_yoy": 0.07,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.42（当期截面分位 38%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.42,
+       "pe": 29.43,
+       "valuation_pctl_current": 0.38,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-28"
+      }
+     },
+     {
+      "dimension": "sector",
+      "text": "所属行业：酿酒行业",
+      "values": {
+       "sector": "酿酒行业"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-28",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-28"
+   },
+   {
+    "ts_code": "300573.SZ",
+    "name": "兴齐眼药",
+    "low_position": 94.0,
+    "quality": 80.19,
+    "quality_coverage": 1.0,
+    "valuation": 17.12,
+    "technical": 59.65,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 16.79,
+    "candidate_score": 66.68,
+    "group": "g_quality_drawdown",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 61.1%",
+      "values": {
+       "drawdown": 0.61,
+       "price_pctl_250d": 0.02
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 2%",
+      "values": {
+       "price_pctl_250d": 0.02
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 +0.43%",
+      "values": {
+       "ma20_slope": 0.0,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 31.9%",
+      "values": {
+       "roe": 0.32,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-29"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +17.5%",
+      "values": {
+       "revenue_yoy": 0.18,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 5.29（当期截面分位 17%）· 口径 derived_report_period",
+      "values": {
+       "pb": 5.29,
+       "pe": 16.79,
+       "valuation_pctl_current": 0.17,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-29"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-29",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-29"
+   },
+   {
+    "ts_code": "301408.SZ",
+    "name": "华人健康",
+    "low_position": 79.23,
+    "quality": 69.75,
+    "quality_coverage": 1.0,
+    "valuation": 61.1,
+    "technical": 53.3,
+    "sector": null,
+    "sector_name": null,
+    "logic": null,
+    "valuation_basis": "derived_report_period",
+    "valuation_note": "当期截面分位（无历史估值序列，不能称历史估值低位）",
+    "pe": 24.41,
+    "candidate_score": 66.39,
+    "group": "g_growth_oversold",
+    "reasons": [
+     {
+      "dimension": "low_position",
+      "text": "距 250 日高点回撤 55.8%",
+      "values": {
+       "drawdown": 0.56,
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "low_position",
+      "text": "250 日价格分位 1%",
+      "values": {
+       "price_pctl_250d": 0.01
+      }
+     },
+     {
+      "dimension": "technical",
+      "text": "MA20 斜率 -0.99%",
+      "values": {
+       "ma20_slope": -0.01,
+       "no_new_low_20d": false
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "ROE 9.9%",
+      "values": {
+       "roe": 0.1,
+       "financial_report_date": "2026-09-30",
+       "financial_ann_date": "2026-10-27"
+      }
+     },
+     {
+      "dimension": "quality",
+      "text": "营收同比 +10.8%",
+      "values": {
+       "revenue_yoy": 0.11,
+       "financial_report_date": "2026-09-30"
+      }
+     },
+     {
+      "dimension": "valuation",
+      "text": "PB 2.39（当期截面分位 61%）· 口径 derived_report_period",
+      "values": {
+       "pb": 2.39,
+       "pe": 24.41,
+       "valuation_pctl_current": 0.61,
+       "valuation_basis": "derived_report_period",
+       "report_date": "2026-09-30",
+       "ann_date": "2026-10-27"
+      }
+     }
+    ],
+    "counter_evidence": [
+     "MA20 仍在下行，尚未确认企稳",
+     "处于 250 日最底部区间，可能仍在下跌通道",
+     "财务数据缺失，质量判断不可用"
+    ],
+    "missing_fields": [],
+    "confidence": 1.0,
+    "red_flags": [
+     "财务缺失"
+    ],
+    "financial_report_date": "2026-09-30",
+    "financial_ann_date": "2026-10-27",
+    "valuation_report_date": "2026-09-30",
+    "valuation_ann_date": "2026-10-27"
+   }
+  ],
+  "status": "ok",
+  "gate": {
+   "low_position": 60.0,
+   "quality": 65.0,
+   "valuation": 50.0,
+   "logic": 65.0,
+   "red_flag_max": 1
+  },
+  "weights": {
+   "low_position": 0.2,
+   "quality": 0.25,
+   "valuation": 0.15,
+   "technical": 0.2,
+   "sector": 0.1,
+   "logic": 0.1
+  },
+  "disclaimer": "低位 ≠ 便宜，质量 ≠ 便宜；本页只做研究候选，不构成买卖建议"
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at_sh": "2026-11-16T17:12:03+08:00",
+  "quality_tier": "APPROX_HISTORY",
+  "status": "ok",
+  "model_version": "sentiment_v0.3.0",
+  "sources": [
+   "akshare"
+  ],
+  "warnings": [],
+  "confidence": null,
+  "stale": false,
+  "missing_indicators": []
+ },
+ "data": {
+  "pages": [
+   "market",
+   "sectors",
+   "candidates",
+   "limit",
+   "research",
+   "system"
+  ],
+  "models": "sentiment_v0.3.0",
+  "generated_at_sh": "2026-11-16T17:12:03+08:00",
+  "disclaimer": "个人研究工具；不构成投资建议；不接券商、不自动下单"
+ }
+}

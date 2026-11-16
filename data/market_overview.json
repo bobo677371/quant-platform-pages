@@ -1,0 +1,604 @@
+{
+ "meta": {
+  "as_of": "2026-11-16",
+  "generated_at_sh": "2026-11-16T17:12:05+08:00",
+  "quality_tier": "APPROX_HISTORY",
+  "status": "ok",
+  "model_version": "sentiment_v0.3.0",
+  "sources": [
+   "sina:hq.sinajs.cn 批量快照",
+   "tencent:fqkline 历史日线（不复权）",
+   "sina:index_zh_daily_sina 指数日线",
+   "eastmoney:stock_zt_pool_em 涨停池"
+  ],
+  "warnings": [
+   "yesterday_limit_premium 样本仅 24 只，置信度下调",
+   "yesterday_limit_premium 取 2026-11-12 的已实现溢价（最新交易日封板需次日才实现）",
+   "option_volume_pcr: 历史仅 108 日，分位可用但尚未覆盖 750 日窗口",
+   "情绪模型状态=candidate：口径已可运行，但尚未完成消融与样本外验证",
+   "共有 1 个指标缺失，缺失权重占比 3.8%：turnover_percentile"
+  ],
+  "confidence": 0.96,
+  "stale": false,
+  "missing_indicators": [
+   "turnover_percentile"
+  ]
+ },
+ "data": {
+  "raw_score": 32.99,
+  "smooth_score": 34.37,
+  "label": "weak",
+  "label_zh": "偏弱",
+  "model_status": "candidate",
+  "low_confidence": false,
+  "components": [
+   {
+    "name": "breadth",
+    "score": 24.71,
+    "weight": 0.25,
+    "available": true
+   },
+   {
+    "name": "limit_ecology",
+    "score": 24.63,
+    "weight": 0.25,
+    "available": true
+   },
+   {
+    "name": "trend",
+    "score": 46.21,
+    "weight": 0.2,
+    "available": true
+   },
+   {
+    "name": "liquidity",
+    "score": 44.65,
+    "weight": 0.15,
+    "available": true
+   },
+   {
+    "name": "risk_appetite",
+    "score": 31.41,
+    "weight": 0.15,
+    "available": true
+   }
+  ],
+  "breadth": {
+   "up": 1108,
+   "down": 4019,
+   "flat": 89,
+   "excluded": 5,
+   "universe": 5221,
+   "net": -2911,
+   "up_ratio": 0.212423,
+   "coverage": 0.999042,
+   "reference_universe": 5223,
+   "reference_universe_count": 5223,
+   "market_coverage": 0.999617,
+   "universe_scope": "full_market"
+  },
+  "limit": {
+   "limit_up": 32,
+   "touched": 48,
+   "broken": 16,
+   "limit_down": 60,
+   "seal_rate": 0.666667,
+   "ladder_max": 4
+  },
+  "amount": {
+   "total_yuan": 1484089550591.6,
+   "vs_ma5": 1.056728,
+   "vs_ma20": 1.132129,
+   "is_estimated": false,
+   "latest_estimated": false,
+   "basis": "交易所成交额（新浪快照）"
+  },
+  "index_trend": [
+   {
+    "ts_code": "000001.SH",
+    "name": "上证指数",
+    "close": 3634.353,
+    "ma20_dev": -0.009339,
+    "ma60_dev": -0.048026
+   },
+   {
+    "ts_code": "000300.SH",
+    "name": "沪深300",
+    "close": 4016.29,
+    "ma20_dev": -0.013081,
+    "ma60_dev": -0.077163
+   },
+   {
+    "ts_code": "399001.SZ",
+    "name": "深证成指",
+    "close": 10968.787,
+    "ma20_dev": -0.030997,
+    "ma60_dev": -0.138927
+   },
+   {
+    "ts_code": "399006.SZ",
+    "name": "创业板指",
+    "close": 2426.084,
+    "ma20_dev": -0.050107,
+    "ma60_dev": -0.205229
+   }
+  ],
+  "pcr": {
+   "status": "ok",
+   "trade_date": "2026-11-13",
+   "value": 0.719,
+   "weighted_pcr": 0.719,
+   "pcr_pctl": 0.16666666666666666,
+   "pctl_low_confidence": false,
+   "by_underlying": [
+    {
+     "underlying_code": "510050",
+     "underlying_name": "上证50ETF华夏",
+     "call_volume": 306767,
+     "put_volume": 236663,
+     "volume_pcr": 0.7715,
+     "pcr_pctl": 0.5277777777777778,
+     "pctl_low_confidence": false,
+     "history_n": 108,
+     "reason_if_null": null
+    },
+    {
+     "underlying_code": "510300",
+     "underlying_name": "沪深300ETF华泰柏瑞",
+     "call_volume": 382860,
+     "put_volume": 306780,
+     "volume_pcr": 0.8013,
+     "pcr_pctl": 0.4074074074074074,
+     "pctl_low_confidence": false,
+     "history_n": 108,
+     "reason_if_null": null
+    },
+    {
+     "underlying_code": "510500",
+     "underlying_name": "中证500ETF南方",
+     "call_volume": 931387,
+     "put_volume": 859097,
+     "volume_pcr": 0.9224,
+     "pcr_pctl": 0.5092592592592593,
+     "pctl_low_confidence": false,
+     "history_n": 108,
+     "reason_if_null": null
+    },
+    {
+     "underlying_code": "588000",
+     "underlying_name": "科创50ETF华夏",
+     "call_volume": 2087521,
+     "put_volume": 1402412,
+     "volume_pcr": 0.6718,
+     "pcr_pctl": 0.16666666666666666,
+     "pctl_low_confidence": false,
+     "history_n": 108,
+     "reason_if_null": null
+    },
+    {
+     "underlying_code": "588080",
+     "underlying_name": "科创50ETF易方达",
+     "call_volume": 428331,
+     "put_volume": 169607,
+     "volume_pcr": 0.396,
+     "pcr_pctl": 0.018518518518518517,
+     "pctl_low_confidence": false,
+     "history_n": 108,
+     "reason_if_null": null
+    }
+   ],
+   "history_days": 108,
+   "formula": "volume_pcr = put_volume / call_volume；综合 PCR 为成交量加权",
+   "source": "akshare:option_daily_stats_sse（上交所官方每日期权统计）",
+   "interpretation": "PCR 高表示 Put 交易更活跃，不等于看空；需结合历史分位解读",
+   "gaps": {
+    "failed_days": 0
+   }
+  },
+  "risk_appetite": {
+   "status": "ok",
+   "trade_date": "2026-11-13",
+   "smallcap_vs_large": -0.020787,
+   "growth_vs_value": -0.034279,
+   "highvol_vs_lowvol": -0.029485,
+   "strong_stock_continuation": 0.017083,
+   "samples": {
+    "highvol_pairs": 1624,
+    "strong_pairs": 813
+   },
+   "proxies": {
+    "smallcap_vs_large": "000852.SH - 000300.SH（中证1000 - 沪深300）",
+    "growth_vs_value": "399006.SZ - 000016.SH（创业板指 - 上证50，代理非真实风格因子）",
+    "highvol_vs_lowvol": "t-1 的 60 日波动率分位（80%/20%）分组，t 日等权收益差",
+    "strong_stock_continuation": "t-1 的过去 20 日涨幅前 10% 与后 10% 分组，t 日收益差"
+   },
+   "no_lookahead": "所有分组均 shift(1)，t 日收益仅用于评价",
+   "source": "tencent:daily_bar + sina:index_daily",
+   "notes": "波动率窗口 60 日、动量窗口 20 日，均 shift(1) 防未来函数"
+  },
+  "confidence_detail": {
+   "available_component_weight": 1.0,
+   "scored_indicator_weight": 0.9625,
+   "missing_weight_share": 0.0375,
+   "history_days": 900,
+   "history_factor": 1.0,
+   "market_coverage": 0.9996,
+   "coverage_factor": 1.0,
+   "missing_indicators": 1,
+   "total_indicators": 24,
+   "indicator_factor": 0.963,
+   "freshness": 1.0,
+   "formula": "conf = scored_indicator_weight × (0.55+0.45×history) × (0.65+0.35×coverage) × freshness"
+  },
+  "contributions": [
+   {
+    "indicator": "adv_share",
+    "component": "breadth",
+    "value": 0.212423,
+    "pctl": 0.174667,
+    "weight": 0.25,
+    "contribution": -4.07,
+    "source": "market_breadth_daily.breadth_up_ratio",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "median_return_residual",
+    "component": "breadth",
+    "value": -0.0029,
+    "pctl": 0.213333,
+    "weight": 0.2,
+    "contribution": -2.87,
+    "source": "market_breadth_daily.median_pct_chg 对 breadth_up_ratio 的滞后滚动回归残差",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "new_high_low_ratio",
+    "component": "breadth",
+    "value": -0.161453,
+    "pctl": 0.08,
+    "weight": 0.15,
+    "contribution": -3.15,
+    "source": "daily_bar_raw 120 日新高/新低占比（(新高−新低)/全市场）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "pct_above_ma20_accel",
+    "component": "breadth",
+    "value": 0.040006,
+    "pctl": 0.612,
+    "weight": 0.2,
+    "contribution": 1.12,
+    "source": "daily_bar_raw (pct_above_ma20 - pct_above_ma60)",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "pct_above_ma60",
+    "component": "breadth",
+    "value": 0.179134,
+    "pctl": 0.132,
+    "weight": 0.2,
+    "contribution": -3.68,
+    "source": "daily_bar_raw close vs MA60",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "limit_up_count",
+    "component": "limit_ecology",
+    "value": 32,
+    "pctl": 0.249333,
+    "weight": 0.2,
+    "contribution": -2.51,
+    "source": "limit_pool_snapshot（供应商真实池）.limit_up_count",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "limit_down_count",
+    "component": "limit_ecology",
+    "value": 60,
+    "pctl": 0.030667,
+    "weight": 0.15,
+    "contribution": -3.52,
+    "source": "limit_pool_snapshot（供应商真实池）.limit_down_count",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "seal_rate",
+    "component": "limit_ecology",
+    "value": 0.666667,
+    "pctl": 0.414667,
+    "weight": 0.35,
+    "contribution": -1.49,
+    "source": "limit_pool_snapshot（供应商真实池）.seal_rate",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "max_continuous_height",
+    "component": "limit_ecology",
+    "value": 4,
+    "pctl": 0.434667,
+    "weight": 0.1,
+    "contribution": -0.33,
+    "source": "limit_pool_snapshot（供应商真实池）.ladder_max",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "yesterday_limit_premium",
+    "component": "limit_ecology",
+    "value": -0.055707,
+    "pctl": 0.016,
+    "weight": 0.2,
+    "contribution": -4.84,
+    "source": "limit_ecology_history.premium_tradable_median（剔除一字板/开盘即封）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "index_ma20_residual",
+    "component": "trend",
+    "value": 0.02705,
+    "pctl": 0.922667,
+    "weight": 0.25,
+    "contribution": 4.23,
+    "source": "index_daily",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "index_ma60_dist",
+    "component": "trend",
+    "value": -0.117336,
+    "pctl": 0.012,
+    "weight": 0.2,
+    "contribution": -3.9,
+    "source": "index_daily",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "index_momentum_5d",
+    "component": "trend",
+    "value": -0.011958,
+    "pctl": 0.333333,
+    "weight": 0.2,
+    "contribution": -1.33,
+    "source": "index_daily",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "index_drawdown_20d",
+    "component": "trend",
+    "value": -0.06334,
+    "pctl": 0.844,
+    "weight": 0.15,
+    "contribution": 2.06,
+    "source": "index_daily",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "intraday_recovery",
+    "component": "trend",
+    "value": 0.161611,
+    "pctl": 0.178667,
+    "weight": 0.2,
+    "contribution": -2.57,
+    "source": "index_daily (close−low)/(high−low) 宽基等权均值",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "amount_ratio_20d",
+    "component": "liquidity",
+    "value": 1.132129,
+    "pctl": 0.801333,
+    "weight": 0.35,
+    "contribution": 3.16,
+    "source": "market_breadth_daily.amount_total",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "turnover_percentile",
+    "component": "liquidity",
+    "value": null,
+    "pctl": null,
+    "weight": 0.25,
+    "contribution": null,
+    "source": "sina_daily_aux.turnover_rate（新浪真实成交量/流通股本）",
+    "updated_at": "2026-11-16",
+    "missing": true,
+    "missing_reason": "历史分位样本不足（至少 250 个有效观测）"
+   },
+   {
+    "indicator": "up_amount_share",
+    "component": "liquidity",
+    "value": 0.243737,
+    "pctl": 0.066667,
+    "weight": 0.2,
+    "contribution": -2.6,
+    "source": "daily_bar_raw amount × pct_chg",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "volume_price_confirm",
+    "component": "liquidity",
+    "value": -0.325989,
+    "pctl": 0.205333,
+    "weight": 0.2,
+    "contribution": -1.77,
+    "source": "market_breadth_daily.amount_total × index_daily 20日滚动量价相关",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "smallcap_vs_large",
+    "component": "risk_appetite",
+    "value": -0.020787,
+    "pctl": 0.029333,
+    "weight": 0.27,
+    "contribution": -3.81,
+    "source": "risk_appetite_daily.smallcap_vs_large（000852.SH − 000300.SH）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "growth_vs_value",
+    "component": "risk_appetite",
+    "value": -0.034279,
+    "pctl": 0.016,
+    "weight": 0.22,
+    "contribution": -3.19,
+    "source": "risk_appetite_daily.growth_vs_value（399006.SZ − 000016.SH，代理口径）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "highvol_vs_lowvol",
+    "component": "risk_appetite",
+    "value": -0.029485,
+    "pctl": 0.053333,
+    "weight": 0.18,
+    "contribution": -2.41,
+    "source": "risk_appetite_daily.highvol_vs_lowvol（t-1 波动率分位分组，样本 1624 只）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "strong_stock_continuation",
+    "component": "risk_appetite",
+    "value": 0.017083,
+    "pctl": 0.916,
+    "weight": 0.23,
+    "contribution": 2.87,
+    "source": "risk_appetite_daily.strong_stock_continuation（过去 20 日涨幅前/后 10%，样本 813 只）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "option_volume_pcr",
+    "component": "risk_appetite",
+    "value": 0.719037,
+    "pctl": 0.824074,
+    "weight": 0.1,
+    "contribution": 0.97,
+    "source": "option_pcr_daily Σput_volume/Σcall_volume（SSE官方）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   }
+  ],
+  "top_positive": [
+   {
+    "indicator": "index_ma20_residual",
+    "component": "trend",
+    "value": 0.02705,
+    "pctl": 0.922667,
+    "weight": 0.25,
+    "contribution": 4.23,
+    "source": "index_daily",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "amount_ratio_20d",
+    "component": "liquidity",
+    "value": 1.132129,
+    "pctl": 0.801333,
+    "weight": 0.35,
+    "contribution": 3.16,
+    "source": "market_breadth_daily.amount_total",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "strong_stock_continuation",
+    "component": "risk_appetite",
+    "value": 0.017083,
+    "pctl": 0.916,
+    "weight": 0.23,
+    "contribution": 2.87,
+    "source": "risk_appetite_daily.strong_stock_continuation（过去 20 日涨幅前/后 10%，样本 813 只）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   }
+  ],
+  "top_negative": [
+   {
+    "indicator": "yesterday_limit_premium",
+    "component": "limit_ecology",
+    "value": -0.055707,
+    "pctl": 0.016,
+    "weight": 0.2,
+    "contribution": -4.84,
+    "source": "limit_ecology_history.premium_tradable_median（剔除一字板/开盘即封）",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "adv_share",
+    "component": "breadth",
+    "value": 0.212423,
+    "pctl": 0.174667,
+    "weight": 0.25,
+    "contribution": -4.07,
+    "source": "market_breadth_daily.breadth_up_ratio",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   },
+   {
+    "indicator": "index_ma60_dist",
+    "component": "trend",
+    "value": -0.117336,
+    "pctl": 0.012,
+    "weight": 0.2,
+    "contribution": -3.9,
+    "source": "index_daily",
+    "updated_at": "2026-11-16",
+    "missing": false,
+    "missing_reason": null
+   }
+  ],
+  "missing_indicators": [
+   "turnover_percentile"
+  ],
+  "history_days": 900
+ }
+}
